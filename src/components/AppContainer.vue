@@ -17,7 +17,5 @@ export default {
   width: 1440px;
   padding: 0px 80px;
   box-sizing: border-box;
-  display: flex;
-  flex-flow: column nowrap;
 }
 </style>

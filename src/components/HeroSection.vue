@@ -1,36 +1,40 @@
 <script>
 import SocialsNetwork from "@/UI/SocialsNetwork.vue";
+import AppContainer from "./AppContainer.vue";
 
 export default {
   name: "HeroSection",
   components: {
     SocialsNetwork,
+    AppContainer,
   },
 };
 </script>
 
 <template>
-  <section class="hero">
-    <div class="hero__wrapper">
-      <img class="hero__img" src="@/assets/img/HeroBanner.svg" alt="banner" />
-      <div class="hero__content">
-        <h1 class="hero__title">
-          Привет, я
-          <span class="hero__title-bold">Мухин Максим. </span>
-          <span class="hero__title-bold">Frontend</span>
-          <span class="hero__title-stroke"> Developer</span>
-          из <span class="hero__title-bold">России.</span>
-        </h1>
-        <p class="hero__text">
-          I'm Evren Shah Lorem Ipsum is simply dummy text of the printing and
-          typesetting industry. Lorem Ipsum has been the industry's standard
-          dummy text ever since the 1500s, when an unknown printer took a galley
-          of type and scrambled it to specimen book.
-        </p>
+  <app-container>
+    <section class="hero">
+      <div class="hero__wrapper">
+        <img class="hero__img" src="@/assets/img/HeroBanner.svg" alt="banner" />
+        <div class="hero__content">
+          <h1 class="hero__title">
+            Привет, я
+            <span class="hero__title-bold">Мухин Максим. </span>
+            <span class="hero__title-bold">Frontend</span>
+            <span class="hero__title-stroke"> Developer</span>
+            из <span class="hero__title-bold">России.</span>
+          </h1>
+          <p class="hero__text">
+            I'm Evren Shah Lorem Ipsum is simply dummy text of the printing and
+            typesetting industry. Lorem Ipsum has been the industry's standard
+            dummy text ever since the 1500s, when an unknown printer took a
+            galley of type and scrambled it to specimen book.
+          </p>
+        </div>
+        <div class="hero__socials"><socials-network /></div>
       </div>
-      <div class="hero__socials"><socials-network /></div>
-    </div>
-  </section>
+    </section>
+  </app-container>
 </template>
 
 <style scoped lang="scss">

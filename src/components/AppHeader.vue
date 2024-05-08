@@ -1,33 +1,36 @@
 <script>
 import PrimaryButton from "@/UI/buttons/PrimaryButton.vue";
 import DownloadIcon from "@/components/icons/DownloadIcon.vue";
+import AppContainer from "./AppContainer.vue";
 
 export default {
   name: "AppHeader",
   components: {
     PrimaryButton,
     DownloadIcon,
+    AppContainer,
   },
 };
 </script>
 
 <template>
-  <header class="header">
-    <a href="#" class="header__link">
-      <img src="@/assets/img/Logo.svg" alt="logo" class="header__logo"
-    /></a>
-    <nav class="nav">
-      <div class="nav__item"><a href="#" class="nav__link">Обо мне</a></div>
-      <div class="nav__item"><a href="#" class="nav__link">Навыки</a></div>
-      <div class="nav__item"><a href="#" class="nav__link">Проекты</a></div>
-      <div class="nav__item"><a href="#" class="nav__link">Связаться</a></div>
-    </nav>
-    <primary-button
-      ><div class="header__button">
-        Резюме
-        <download-icon /></div
-    ></primary-button>
-  </header>
+  <app-container
+    ><header class="header">
+      <a href="#" class="header__link">
+        <img src="@/assets/img/Logo.svg" alt="logo" class="header__logo"
+      /></a>
+      <nav class="nav">
+        <div class="nav__item"><a href="#" class="nav__link">Обо мне</a></div>
+        <div class="nav__item"><a href="#" class="nav__link">Навыки</a></div>
+        <div class="nav__item"><a href="#" class="nav__link">Проекты</a></div>
+        <div class="nav__item"><a href="#" class="nav__link">Связаться</a></div>
+      </nav>
+      <primary-button
+        ><div class="header__button">
+          Резюме
+          <download-icon /></div
+      ></primary-button></header
+  ></app-container>
 </template>
 
 <style scoped lang="scss">
