@@ -1,10 +1,11 @@
 <script>
 import HeroSection from "../components/HeroSection.vue";
 import ExperienceSection from "@/components/ExperienceSection.vue";
+import AboutSection from "@/components/AboutSection.vue";
 
 export default {
   name: "MainView",
-  components: { HeroSection, ExperienceSection },
+  components: { HeroSection, ExperienceSection, AboutSection },
 };
 </script>
 
@@ -12,6 +13,7 @@ export default {
   <div class="main-view">
     <hero-section />
     <experience-section />
+    <about-section />
   </div>
 </template>
 
