@@ -1,15 +1,17 @@
 <script>
 import HeroSection from "../components/HeroSection.vue";
+import ExperienceSection from "@/components/ExperienceSection.vue";
 
 export default {
   name: "MainView",
-  components: { HeroSection },
+  components: { HeroSection, ExperienceSection },
 };
 </script>
 
 <template>
   <div class="main-view">
     <hero-section />
+    <experience-section />
   </div>
 </template>
 

@@ -19,3 +19,14 @@ body {
     height: 100%;
     background: $primary-white;
 }
+
+.section__title {
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: -0.02em;
+    font-weight: 400;
+
+    &-bold {
+        font-weight: 800;
+    }
+}
