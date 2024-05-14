@@ -55,7 +55,7 @@ export default {
 @import "@/assets/styles/_vars.scss";
 
 .about {
-  padding: 60px 32px;
+  padding: 60px 0px;
   box-sizing: border-box;
 
   &__wrapper {
@@ -63,6 +63,8 @@ export default {
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: flex-start;
+    padding: 0px 32px;
+    box-sizing: border-box;
   }
 
   &__content {
