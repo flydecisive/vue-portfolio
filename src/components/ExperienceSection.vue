@@ -39,6 +39,7 @@ export default {
   padding: 60px 0px;
   box-sizing: border-box;
   background: $primary-black;
+  width: 100%;
 
   &__wrapper {
     padding: 0px 32px;

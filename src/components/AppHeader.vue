@@ -10,6 +10,15 @@ export default {
     DownloadIcon,
     AppContainer,
   },
+  methods: {
+    triggerDownload() {
+      const link = document.createElement("a");
+      link.href = "/src/assets/files/resume.pdf";
+      link.download = "resume.pdf";
+      link.click();
+      URL.revokeObjectURL(link.href);
+    },
+  },
 };
 </script>
 
@@ -30,11 +39,8 @@ export default {
         <div class="nav__item">
           <a href="#projects" class="nav__link">Проекты</a>
         </div>
-        <div class="nav__item">
-          <a href="#contact" class="nav__link">Связаться</a>
-        </div>
       </nav>
-      <primary-button
+      <primary-button @click="triggerDownload"
         ><div class="header__button">
           Резюме
           <download-icon /></div
