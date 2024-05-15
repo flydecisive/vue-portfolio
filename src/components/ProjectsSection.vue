@@ -21,7 +21,7 @@ export default {
 </script>
 
 <template>
-  <section class="projects">
+  <section class="projects" id="projects">
     <app-container
       ><div class="projects__wrapper">
         <h2 class="projects__title section__title">

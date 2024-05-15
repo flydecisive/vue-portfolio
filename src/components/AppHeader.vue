@@ -20,10 +20,19 @@ export default {
         <img src="@/assets/img/Logo.svg" alt="logo" class="header__logo"
       /></a>
       <nav class="nav">
-        <div class="nav__item"><a href="#" class="nav__link">Обо мне</a></div>
-        <div class="nav__item"><a href="#" class="nav__link">Навыки</a></div>
-        <div class="nav__item"><a href="#" class="nav__link">Проекты</a></div>
-        <div class="nav__item"><a href="#" class="nav__link">Связаться</a></div>
+        <div class="nav__item">
+          <a href="#skills" class="nav__link">Навыки</a>
+        </div>
+        <div class="nav__item"><a href="#exp" class="nav__link">Опыт</a></div>
+        <div class="nav__item">
+          <a href="#about" class="nav__link">Обо мне</a>
+        </div>
+        <div class="nav__item">
+          <a href="#projects" class="nav__link">Проекты</a>
+        </div>
+        <div class="nav__item">
+          <a href="#contact" class="nav__link">Связаться</a>
+        </div>
       </nav>
       <primary-button
         ><div class="header__button">

@@ -10,7 +10,7 @@ export default {
 </script>
 
 <template>
-  <section class="about">
+  <section class="about" id="about">
     <app-container>
       <div class="about__wrapper">
         <img src="@/assets/img/About.svg" alt="img" class="about__img" />

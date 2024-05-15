@@ -34,7 +34,7 @@ export default {
 </script>
 
 <template>
-  <section class="skills">
+  <section class="skills" id="skills">
     <app-container>
       <div class="skills__wrapper">
         <h2 class="skills__title section__title">
