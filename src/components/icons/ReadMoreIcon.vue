@@ -1,6 +1,16 @@
 <script>
 export default {
   name: "ReadMoreIcon",
+  props: {
+    colorName: String,
+  },
+  // computed: {
+  //   iconStyle() {
+  //     return {
+  //       stroke: this.colorName === "white" ? "#000" : "#fff",
+  //     };
+  //   },
+  // },
 };
 </script>
 
@@ -14,21 +24,21 @@ export default {
   >
     <path
       d="M10.8333 9.16658L17.6667 2.33325"
-      class="read-more"
+      :class="colorName === 'white' ? 'read-more read-more-black' : 'read-more'"
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
     />
     <path
       d="M18.3333 5.66675V1.66675H14.3333"
-      class="read-more"
+      :class="colorName === 'white' ? 'read-more read-more-black' : 'read-more'"
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
     />
     <path
       d="M9.16667 1.66675H7.5C3.33333 1.66675 1.66667 3.33341 1.66667 7.50008V12.5001C1.66667 16.6667 3.33333 18.3334 7.5 18.3334H12.5C16.6667 18.3334 18.3333 16.6667 18.3333 12.5001V10.8334"
-      class="read-more"
+      :class="colorName === 'white' ? 'read-more read-more-black' : 'read-more'"
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
@@ -40,8 +50,12 @@ export default {
 @import "@/assets/styles/_vars.scss";
 
 .read-more {
-  stroke: $primary-white;
   transition: all 0.3s;
+  stroke: $primary-white;
+
+  &-black {
+    stroke: $primary-black;
+  }
 }
 
 .project__link:hover .read-more {

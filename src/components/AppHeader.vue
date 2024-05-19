@@ -25,9 +25,9 @@ export default {
 <template>
   <app-container
     ><header class="header">
-      <a href="#" class="header__link">
+      <router-link to="/" class="header__link">
         <img src="@/assets/img/Logo.svg" alt="logo" class="header__logo"
-      /></a>
+      /></router-link>
       <nav class="nav">
         <div class="nav__item">
           <a href="#skills" class="nav__link">Навыки</a>

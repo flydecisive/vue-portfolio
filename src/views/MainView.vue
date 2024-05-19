@@ -4,9 +4,15 @@ import SkillsSection from "@/components/SkillsSection.vue";
 import ExperienceSection from "@/components/ExperienceSection.vue";
 import AboutSection from "@/components/AboutSection.vue";
 import ProjectsSection from "@/components/ProjectsSection.vue";
+import TOP_PROJECTS from "@/consts/TOP_PROJECTS";
 
 export default {
   name: "MainView",
+  data() {
+    return {
+      projects: TOP_PROJECTS,
+    };
+  },
   components: {
     HeroSection,
     ExperienceSection,
@@ -23,7 +29,7 @@ export default {
     <skills-section />
     <experience-section />
     <about-section />
-    <projects-section />
+    <projects-section :projects="projects" :isMoreButtonVisible="true" />
   </div>
 </template>
 

@@ -3,36 +3,54 @@ import AppContainer from "@/components/AppContainer.vue";
 import ProjectsItem from "@/UI/ProjectsItem.vue";
 import TransparentButton from "@/UI/buttons/TransparentButton.vue";
 
-import TOP_PROJECTS from "@/consts/TOP_PROJECTS.js";
-
 export default {
   name: "ProjectsSection",
-  data() {
-    return {
-      projects: TOP_PROJECTS,
-    };
+  props: {
+    projects: Object,
+    colorName: { type: String, default: "black" },
+    isMoreButtonVisible: Boolean,
   },
   components: {
     AppContainer,
     ProjectsItem,
     TransparentButton,
   },
+  methods: {
+    goToProjects() {
+      this.$router.push("/projects");
+    },
+  },
+  computed: {
+    style() {
+      return {
+        background: this.colorName === "white" ? "#fff" : "#000",
+      };
+    },
+    titleStyle() {
+      return {
+        color: this.colorName === "white" ? "#000" : "#fff",
+      };
+    },
+  },
 };
 </script>
 
 <template>
-  <section class="projects" id="projects">
+  <section class="projects" id="projects" :style="style">
     <app-container
       ><div class="projects__wrapper">
-        <h2 class="projects__title section__title">
+        <h2 class="section__title" :style="titleStyle">
           Мои <span class="section__title-bold">Проекты</span>
         </h2>
         <projects-item
           v-for="project in projects"
           :item="project"
           :order="project.id % 2 === 0 ? 0 : 1"
+          :colorName="colorName"
         />
-        <transparent-button>Смотреть все</transparent-button>
+        <transparent-button @click="goToProjects" v-if="isMoreButtonVisible"
+          >Смотреть все</transparent-button
+        >
       </div></app-container
     >
   </section>
@@ -42,7 +60,6 @@ export default {
 @import "@/assets/styles/_vars.scss";
 
 .projects {
-  background: $primary-black;
   padding: 60px 0px;
   box-sizing: border-box;
   width: 100%;
@@ -55,10 +72,6 @@ export default {
     align-items: center;
     gap: 20px;
     width: 100%;
-  }
-
-  &__title {
-    color: $primary-white;
   }
 }
 </style>

@@ -9,6 +9,7 @@ export default {
   props: {
     order: Number,
     item: Object,
+    colorName: String,
   },
   computed: {
     style() {
@@ -19,27 +20,45 @@ export default {
         "background-repeat": "no-repeat",
       };
     },
+    titleStyle() {
+      return {
+        color: this.colorName === "white" ? "#000" : "#fff",
+      };
+    },
+    descriptionStyle() {
+      return {
+        color: this.colorName === "white" ? "#27272a" : "#71717a",
+      };
+    },
+    stackStyle() {
+      return {
+        color: this.colorName === "white" ? "#000" : "#fff",
+        borderColor: this.colorName === "white" ? "#000" : "#fff",
+      };
+    },
   },
 };
 </script>
 
 <template>
   <div class="project">
-    <div class="project__cover" :style="style">
-      <!-- <img :src="item.cover_src" alt="cover" class="project__cover_img" /> -->
-    </div>
+    <div class="project__cover" :style="style"></div>
     <div class="project__content">
-      <h4 class="project__title">{{ item.name }}</h4>
+      <h4 class="project__title" :style="titleStyle">{{ item.name }}</h4>
       <div class="project__stack">
-        <div class="project__stack_item" v-for="stack in item.stacks">
+        <div
+          class="project__stack_item"
+          v-for="stack in item.stacks"
+          :style="stackStyle"
+        >
           {{ stack }}
         </div>
       </div>
-      <p class="project__description">
+      <p class="project__description" :style="descriptionStyle">
         {{ item.description }}
       </p>
       <a :href="item.link" class="project__link">
-        <read-more-icon />
+        <read-more-icon :colorName="colorName" />
       </a>
     </div>
   </div>
@@ -62,7 +81,6 @@ export default {
     height: 400px;
     border-radius: 18px;
     flex-shrink: 0;
-    // background: url("@/assets/img/covers/react-music-player.png");
 
     &_img {
       width: 100%;
@@ -74,7 +92,6 @@ export default {
     font-weight: 700;
     font-size: 32px;
     line-height: 40px;
-    color: $primary-white;
     letter-spacing: -0.02em;
   }
 
@@ -83,7 +100,6 @@ export default {
     font-size: 16px;
     line-height: 20px;
     letter-spacing: 0.02em;
-    color: $zinc-500;
   }
 
   &__content {
