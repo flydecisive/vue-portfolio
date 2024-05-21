@@ -1,10 +1,12 @@
 <script>
 import AppContainer from "./AppContainer.vue";
+import AppLogo from "@/components/icons/AppLogo.vue";
 
 export default {
   name: "AppFooter",
   components: {
     AppContainer,
+    AppLogo,
   },
 };
 </script>
@@ -13,7 +15,10 @@ export default {
   <footer class="footer">
     <app-container>
       <div class="footer__wrapper">
-        <img src="@/assets/img/LogoFooter.svg" alt="logo" />
+        <router-link to="/">
+          <app-logo :colorName="'white'" />
+        </router-link>
+
         <p class="footer__text">@Мухин Максим</p>
       </div></app-container
     >

@@ -57,9 +57,9 @@ export default {
       <p class="project__description" :style="descriptionStyle">
         {{ item.description }}
       </p>
-      <a :href="item.link" class="project__link">
+      <router-link :to="`/project/${item.id}`" class="project__link">
         <read-more-icon :colorName="colorName" />
-      </a>
+      </router-link>
     </div>
   </div>
 </template>

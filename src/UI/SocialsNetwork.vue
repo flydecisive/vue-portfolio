@@ -2,6 +2,7 @@
 import VkIcon from "../components/icons/social-network/VkIcon.vue";
 import TelegramIcon from "@/components/icons/social-network/TelegramIcon.vue";
 import GithubIcon from "@/components/icons/social-network/GithubIcon.vue";
+import EmailIcon from "@/components/icons/social-network/EmailIcon.vue";
 
 export default {
   name: "SocialsNetwork",
@@ -9,6 +10,7 @@ export default {
     VkIcon,
     GithubIcon,
     TelegramIcon,
+    EmailIcon,
   },
 };
 </script>
@@ -27,6 +29,13 @@ export default {
       target="_blank"
     >
       <github-icon />
+    </a>
+    <a
+      class="socials__item"
+      href="mailto:flydecisive@yandex.ru"
+      target="_blank"
+    >
+      <email-icon />
     </a>
   </div>
 </template>

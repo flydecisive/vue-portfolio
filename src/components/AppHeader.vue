@@ -2,6 +2,7 @@
 import PrimaryButton from "@/UI/buttons/PrimaryButton.vue";
 import DownloadIcon from "@/components/icons/DownloadIcon.vue";
 import AppContainer from "./AppContainer.vue";
+import AppLogo from "@/components/icons/AppLogo.vue";
 
 export default {
   name: "AppHeader",
@@ -9,6 +10,7 @@ export default {
     PrimaryButton,
     DownloadIcon,
     AppContainer,
+    AppLogo,
   },
   methods: {
     triggerDownload() {
@@ -26,18 +28,20 @@ export default {
   <app-container
     ><header class="header">
       <router-link to="/" class="header__link">
-        <img src="@/assets/img/Logo.svg" alt="logo" class="header__logo"
-      /></router-link>
+        <app-logo />
+      </router-link>
       <nav class="nav">
         <div class="nav__item">
-          <a href="#skills" class="nav__link">Навыки</a>
-        </div>
-        <div class="nav__item"><a href="#exp" class="nav__link">Опыт</a></div>
-        <div class="nav__item">
-          <a href="#about" class="nav__link">Обо мне</a>
+          <router-link to="/#skills" class="nav__link">Навыки</router-link>
         </div>
         <div class="nav__item">
-          <a href="#projects" class="nav__link">Проекты</a>
+          <router-link to="/#exp" class="nav__link">Опыт</router-link>
+        </div>
+        <div class="nav__item">
+          <router-link to="/#about" class="nav__link">Обо мне</router-link>
+        </div>
+        <div class="nav__item">
+          <router-link to="/#projects" class="nav__link">Проекты</router-link>
         </div>
       </nav>
       <primary-button @click="triggerDownload"
