@@ -20,7 +20,7 @@ const TOP_PROJECTS = [
     stacks: ["React", "JavaScript", "Redux"],
     source_code_link: "https://github.com/flydecisive/react-music-player",
     deploy_link: "https://flydecisive.github.io/react-music-player/",
-    cover_src: `/public/react-music-player.png`,
+    cover_src: `/react-music-player.png`,
     images: [
       `${IMG_PATH}react-player/1.png`,
       `${IMG_PATH}react-player/2.png`,
