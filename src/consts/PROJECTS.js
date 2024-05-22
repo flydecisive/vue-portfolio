@@ -1,5 +1,3 @@
-const IMG_PATH = "/src/assets/img/";
-
 const PROJECTS = [
   {
     id: 0,
@@ -20,13 +18,13 @@ const PROJECTS = [
     stacks: ["React", "JavaScript", "Redux"],
     source_code_link: "https://github.com/flydecisive/react-music-player",
     deploy_link: "https://flydecisive.github.io/react-music-player/",
-    cover_src: `${IMG_PATH}covers/react-music-player.png`,
+    cover_src: `/covers/react-music-player.png`,
     images: [
-      `${IMG_PATH}react-player/1.png`,
-      `${IMG_PATH}react-player/2.png`,
-      `${IMG_PATH}react-player/3.png`,
-      `${IMG_PATH}react-player/4.png`,
-      `${IMG_PATH}react-player/5.png`,
+      `/react-player/1.png`,
+      `/react-player/2.png`,
+      `/react-player/3.png`,
+      `/react-player/4.png`,
+      `/react-player/5.png`,
     ],
   },
   {
@@ -48,12 +46,12 @@ const PROJECTS = [
     stacks: ["React", "Redux", "TypeScript", "CSS-modules", "Docker"],
     source_code_link: "https://github.com/flydecisive/skypro-avito",
     deploy_link: "",
-    cover_src: `${IMG_PATH}covers/react-avito.png`,
+    cover_src: `/covers/react-avito.png`,
     images: [
-      `${IMG_PATH}skypro-avito/1.png`,
-      `${IMG_PATH}skypro-avito/2.png`,
-      `${IMG_PATH}skypro-avito/3.png`,
-      `${IMG_PATH}skypro-avito/4.png`,
+      `/skypro-avito/1.png`,
+      `/skypro-avito/2.png`,
+      `/skypro-avito/3.png`,
+      `/skypro-avito/4.png`,
     ],
   },
   {
@@ -72,11 +70,11 @@ const PROJECTS = [
     source_code_link:
       "https://github.com/flydecisive/fitness-app?tab=readme-ov-file",
     deploy_link: "https://resplendent-frangipane-1f3b0e.netlify.app/",
-    cover_src: `${IMG_PATH}covers/react-fitness.png`,
+    cover_src: `/covers/react-fitness.png`,
     images: [
-      `${IMG_PATH}react-fitness/1.png`,
-      `${IMG_PATH}react-fitness/2.png`,
-      `${IMG_PATH}react-fitness/3.png`,
+      `/react-fitness/1.png`,
+      `/react-fitness/2.png`,
+      `/react-fitness/3.png`,
     ],
   },
   {
@@ -93,12 +91,8 @@ const PROJECTS = [
     stacks: ["React", "TypeScript", "Vite", "Redux Toolkit", "CSS-modules"],
     source_code_link: "https://github.com/flydecisive/itl-test",
     deploy_link: "https://monumental-klepon-a6df1c.netlify.app/",
-    cover_src: `${IMG_PATH}covers/itl-test.png`,
-    images: [
-      `${IMG_PATH}itl-test/1.png`,
-      `${IMG_PATH}itl-test/2.png`,
-      `${IMG_PATH}itl-test/3.png`,
-    ],
+    cover_src: `/covers/itl-test.png`,
+    images: [`/itl-test/1.png`, `/itl-test/2.png`, `/itl-test/3.png`],
   },
   {
     id: 4,
@@ -122,12 +116,12 @@ const PROJECTS = [
     ],
     source_code_link: "https://github.com/flydecisive/antipoff-test",
     deploy_link: "https://delicate-concha-cde732.netlify.app/",
-    cover_src: `${IMG_PATH}covers/antipoff-test.png`,
+    cover_src: `/covers/antipoff-test.png`,
     images: [
-      `${IMG_PATH}antipoff-test/1.png`,
-      `${IMG_PATH}antipoff-test/2.png`,
-      `${IMG_PATH}antipoff-test/3.png`,
-      `${IMG_PATH}antipoff-test/4.png`,
+      `/antipoff-test/1.png`,
+      `/antipoff-test/2.png`,
+      `/antipoff-test/3.png`,
+      `/antipoff-test/4.png`,
     ],
   },
 
@@ -145,13 +139,13 @@ const PROJECTS = [
     source_code_link:
       "https://github.com/flydecisive/webdev-dom-homework?tab=readme-ov-file",
     deploy_link: "https://flydecisive.github.io/webdev-dom-homework/",
-    cover_src: `${IMG_PATH}covers/comments-cover.png`,
+    cover_src: `/covers/comments-cover.png`,
     images: [
-      `${IMG_PATH}comments-app/1.png`,
-      `${IMG_PATH}comments-app/2.png`,
-      `${IMG_PATH}comments-app/3.png`,
-      `${IMG_PATH}comments-app/4.png`,
-      `${IMG_PATH}comments-app/5.png`,
+      `/comments-app/1.png`,
+      `/comments-app/2.png`,
+      `/comments-app/3.png`,
+      `/comments-app/4.png`,
+      `/comments-app/5.png`,
     ],
   },
   {
@@ -168,11 +162,8 @@ const PROJECTS = [
     source_code_link:
       "https://github.com/flydecisive/vue-calculator?tab=readme-ov-file",
     deploy_link: "https://vue-calculator-pied-rho.vercel.app/",
-    cover_src: `${IMG_PATH}covers/vue-calculator.png`,
-    images: [
-      `${IMG_PATH}vue-calculator/1.png`,
-      `${IMG_PATH}vue-calculator/2.png`,
-    ],
+    cover_src: `/covers/vue-calculator.png`,
+    images: [`/vue-calculator/1.png`, `/vue-calculator/2.png`],
   },
   {
     id: 11,
@@ -183,13 +174,13 @@ const PROJECTS = [
     stacks: ["HTML", "SCSS"],
     source_code_link: "https://github.com/flydecisive/furniture-store",
     deploy_link: "https://flydecisive.github.io/furniture-store/",
-    cover_src: `${IMG_PATH}covers/furniture-store.png`,
+    cover_src: `/covers/furniture-store.png`,
     images: [
-      `${IMG_PATH}furniture-store/1.png`,
-      `${IMG_PATH}furniture-store/2.png`,
-      `${IMG_PATH}furniture-store/3.png`,
-      `${IMG_PATH}furniture-store/4.png`,
-      `${IMG_PATH}furniture-store/5.png`,
+      `/furniture-store/1.png`,
+      `/furniture-store/2.png`,
+      `/furniture-store/3.png`,
+      `/furniture-store/4.png`,
+      `/furniture-store/5.png`,
     ],
   },
   {
@@ -201,12 +192,8 @@ const PROJECTS = [
     stacks: ["Vite", "HTML", "SCSS", "JavaScript"],
     source_code_link: "https://github.com/flydecisive/magwai-test-upd",
     deploy_link: "https://stellular-sunburst-fe26d7.netlify.app/",
-    cover_src: `${IMG_PATH}covers/magwai-test.png`,
-    images: [
-      `${IMG_PATH}magwai-test/1.png`,
-      `${IMG_PATH}magwai-test/2.png`,
-      `${IMG_PATH}magwai-test/3.png`,
-    ],
+    cover_src: `/covers/magwai-test.png`,
+    images: [`/magwai-test/1.png`, `/magwai-test/2.png`, `/magwai-test/3.png`],
   },
   {
     id: 7,
@@ -217,8 +204,8 @@ const PROJECTS = [
     stacks: ["HTML", "SCSS"],
     source_code_link: "https://github.com/flydecisive/amoCRM-test",
     deploy_link: "https://flydecisive.github.io/amoCRM-test",
-    cover_src: `${IMG_PATH}covers/amocrm-test.png`,
-    images: [`${IMG_PATH}amocrm-test/1.png`],
+    cover_src: `/covers/amocrm-test.png`,
+    images: [`/amocrm-test/1.png`],
   },
   {
     id: 8,
@@ -233,13 +220,13 @@ const PROJECTS = [
     stacks: ["HTML", "SCSS", "JavaScript", "Husky", "Webpack"],
     source_code_link: "https://github.com/flydecisive/card_game",
     deploy_link: "https://flydecisive.github.io/card_game/",
-    cover_src: `${IMG_PATH}covers/card-game.png`,
+    cover_src: `/covers/card-game.png`,
     images: [
-      `${IMG_PATH}card-game/1.png`,
-      `${IMG_PATH}card-game/2.png`,
-      `${IMG_PATH}card-game/3.png`,
-      `${IMG_PATH}card-game/4.png`,
-      `${IMG_PATH}card-game/5.png`,
+      `/card-game/1.png`,
+      `/card-game/2.png`,
+      `/card-game/3.png`,
+      `/card-game/4.png`,
+      `/card-game/5.png`,
     ],
   },
   {
@@ -258,11 +245,11 @@ const PROJECTS = [
     stacks: ["Vite", "React", "TypeScript", "Styled Components"],
     source_code_link: "https://github.com/flydecisive/weather-test",
     deploy_link: "",
-    cover_src: `${IMG_PATH}covers/weather-test.png`,
+    cover_src: `/covers/weather-test.png`,
     images: [
-      `${IMG_PATH}weather-test/1.png`,
-      `${IMG_PATH}weather-test/2.png`,
-      `${IMG_PATH}weather-test/3.png`,
+      `/weather-test/1.png`,
+      `/weather-test/2.png`,
+      `/weather-test/3.png`,
     ],
   },
   {
@@ -274,12 +261,8 @@ const PROJECTS = [
     stacks: ["HTML", "SCSS", "JavaScript"],
     source_code_link: "https://github.com/flydecisive/oscar-test",
     deploy_link: "https://flydecisive.github.io/oscar-test/",
-    cover_src: `${IMG_PATH}covers/oscar-test.png`,
-    images: [
-      `${IMG_PATH}oscar-test/1.png`,
-      `${IMG_PATH}oscar-test/2.png`,
-      `${IMG_PATH}oscar-test/3.png`,
-    ],
+    cover_src: `/covers/oscar-test.png`,
+    images: [`/oscar-test/1.png`, `/oscar-test/2.png`, `/oscar-test/3.png`],
   },
 ];
 

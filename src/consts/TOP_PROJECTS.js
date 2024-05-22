@@ -20,13 +20,13 @@ const TOP_PROJECTS = [
     stacks: ["React", "JavaScript", "Redux"],
     source_code_link: "https://github.com/flydecisive/react-music-player",
     deploy_link: "https://flydecisive.github.io/react-music-player/",
-    cover_src: `/react-music-player.png`,
+    cover_src: `/covers/react-music-player.png`,
     images: [
-      `${IMG_PATH}react-player/1.png`,
-      `${IMG_PATH}react-player/2.png`,
-      `${IMG_PATH}react-player/3.png`,
-      `${IMG_PATH}react-player/4.png`,
-      `${IMG_PATH}react-player/5.png`,
+      `/react-player/1.png`,
+      `/react-player/2.png`,
+      `/react-player/3.png`,
+      `/react-player/4.png`,
+      `/react-player/5.png`,
     ],
   },
   {
@@ -48,12 +48,12 @@ const TOP_PROJECTS = [
     stacks: ["React", "Redux", "TypeScript", "CSS-modules", "Docker"],
     source_code_link: "https://github.com/flydecisive/skypro-avito",
     deploy_link: "",
-    cover_src: `${IMG_PATH}covers/react-avito.png`,
+    cover_src: `/covers/react-avito.png`,
     images: [
-      `${IMG_PATH}skypro-avito/1.png`,
-      `${IMG_PATH}skypro-avito/2.png`,
-      `${IMG_PATH}skypro-avito/3.png`,
-      `${IMG_PATH}skypro-avito/4.png`,
+      `/skypro-avito/1.png`,
+      `/skypro-avito/2.png`,
+      `/skypro-avito/3.png`,
+      `/skypro-avito/4.png`,
     ],
   },
   {
@@ -72,11 +72,11 @@ const TOP_PROJECTS = [
     source_code_link:
       "https://github.com/flydecisive/fitness-app?tab=readme-ov-file",
     deploy_link: "https://resplendent-frangipane-1f3b0e.netlify.app/",
-    cover_src: `${IMG_PATH}covers/react-fitness.png`,
+    cover_src: `/covers/react-fitness.png`,
     images: [
-      `${IMG_PATH}react-fitness/1.png`,
-      `${IMG_PATH}react-fitness/2.png`,
-      `${IMG_PATH}react-fitness/3.png`,
+      `/react-fitness/1.png`,
+      `/react-fitness/2.png`,
+      `/react-fitness/3.png`,
     ],
   },
 ];
