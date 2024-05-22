@@ -111,4 +111,25 @@ export default {
     color: $zinc-300;
   }
 }
+
+@media (max-width: 640px) {
+  .experience__item {
+    &_header {
+      flex-flow: column nowrap;
+      gap: 16px;
+      align-items: center;
+    }
+
+    &_title {
+      font-size: 20px;
+      line-height: 24px;
+      text-align: center;
+
+      &_wrapper {
+        align-items: flex-start;
+        align-self: flex-start;
+      }
+    }
+  }
+}
 </style>

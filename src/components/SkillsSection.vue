@@ -111,4 +111,30 @@ export default {
     }
   }
 }
+
+@media (max-width: 640px) {
+  .skills {
+    padding: 40px 0px;
+
+    &__wrapper {
+      padding: 0px;
+    }
+
+    &__list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+      gap: 20px;
+    }
+
+    &__item {
+      width: 100%;
+      height: auto;
+      padding: 24px;
+      box-sizing: border-box;
+      max-width: 186px;
+      max-height: 186px;
+    }
+  }
+}
 </style>

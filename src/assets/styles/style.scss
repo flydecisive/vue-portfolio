@@ -52,3 +52,10 @@ body {
     height: 56px;
     transition: all .3s;
 }
+
+@media (max-width: 640px) {
+    .section__title {
+        font-size: 28px;
+        line-height: 32px;
+    }
+}

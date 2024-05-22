@@ -39,4 +39,11 @@ export default {
     fill: $primary-white;
   }
 }
+
+@media (max-width: 640px) {
+  .app_logo {
+    width: 25px;
+    height: 25px;
+  }
+}
 </style>

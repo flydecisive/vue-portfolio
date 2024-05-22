@@ -5,6 +5,11 @@ import TransparentButton from "@/UI/buttons/TransparentButton.vue";
 
 export default {
   name: "ProjectsSection",
+  data() {
+    return {
+      isBigScreen: true,
+    };
+  },
   props: {
     projects: Object,
     colorName: { type: String, default: "black" },
@@ -15,9 +20,36 @@ export default {
     ProjectsItem,
     TransparentButton,
   },
+  created() {
+    window.addEventListener("resize", this.onResize);
+    this.onResize();
+  },
+  destroyed() {
+    window.removeEventListener("resize", this.onResize);
+  },
   methods: {
     goToProjects() {
       this.$router.push("/projects");
+    },
+
+    onResize() {
+      this.isBigScreen = window.innerWidth >= 640;
+    },
+
+    changeOrder(index) {
+      let order = 0;
+
+      if (!this.isBigScreen) {
+        order = 0;
+      } else {
+        if (index % 2 === 0) {
+          order = 0;
+        } else {
+          order = 1;
+        }
+      }
+
+      return order;
     },
   },
   computed: {
@@ -45,7 +77,7 @@ export default {
         <projects-item
           v-for="(project, index) in projects"
           :item="project"
-          :order="index % 2 === 0 ? 0 : 1"
+          :order="changeOrder(index)"
           :colorName="colorName"
         />
         <transparent-button @click="goToProjects" v-if="isMoreButtonVisible"
@@ -72,6 +104,16 @@ export default {
     align-items: center;
     gap: 20px;
     width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .projects {
+    padding: 40px 0px;
+
+    &__wrapper {
+      padding: 0px;
+    }
   }
 }
 </style>

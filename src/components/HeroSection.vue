@@ -16,6 +16,11 @@ export default {
     <section class="hero">
       <div class="hero__wrapper">
         <img class="hero__img" src="@/assets/img/HeroBanner.svg" alt="banner" />
+        <img
+          class="hero__img hero__img-mobile"
+          src="@/assets/img/HeroBannerMobile.svg"
+          alt="banner"
+        />
         <div class="hero__content">
           <h1 class="hero__title">
             Привет, я
@@ -84,6 +89,10 @@ export default {
     position: absolute;
     top: 0;
     right: 0;
+
+    &-mobile {
+      display: none;
+    }
   }
 
   &__content {
@@ -100,6 +109,47 @@ export default {
     transform: translateY(50%);
     padding: 4px 0px;
     box-sizing: border-box;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 40px 0px;
+
+    &__wrapper {
+      flex-flow: column nowrap;
+      height: fit-content;
+      align-items: center;
+      gap: 48px;
+    }
+
+    &__img {
+      position: unset;
+      width: 100%;
+      height: auto;
+      display: none;
+
+      &-mobile {
+        display: block;
+      }
+    }
+
+    &__content {
+      width: 100%;
+      display: flex;
+      flex-flow: column nowrap;
+    }
+
+    &__title {
+      font-size: 28px;
+      line-height: 32px;
+    }
+
+    &__socials {
+      position: unset;
+      align-self: flex-start;
+      transform: none;
+    }
   }
 }
 </style>

@@ -18,4 +18,13 @@ export default {
   padding: 0px 80px;
   box-sizing: border-box;
 }
+
+@media (max-width: 640px) {
+  .container {
+    margin: 0;
+    width: 100%;
+    max-width: 640px;
+    padding: 0px 16px;
+  }
+}
 </style>

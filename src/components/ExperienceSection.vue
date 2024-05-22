@@ -65,5 +65,18 @@ export default {
     width: 100%;
   }
 }
+
+@media (max-width: 640px) {
+  .experience {
+    padding: 40px 0px;
+
+    &__wrapper {
+      padding: 0px;
+    }
+
+    &__content {
+      padding: 20px 8px;
+    }
+  }
+}
 </style>
-@/consts/consts.js

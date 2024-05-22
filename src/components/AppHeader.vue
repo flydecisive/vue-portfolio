@@ -3,14 +3,29 @@ import PrimaryButton from "@/UI/buttons/PrimaryButton.vue";
 import DownloadIcon from "@/components/icons/DownloadIcon.vue";
 import AppContainer from "./AppContainer.vue";
 import AppLogo from "@/components/icons/AppLogo.vue";
+import BurgerMenuIcon from "@/components/icons/BurgerMenuIcon.vue";
 
 export default {
   name: "AppHeader",
+  data() {
+    return {
+      isBigScreen: true,
+      isMenuOpen: false,
+    };
+  },
   components: {
     PrimaryButton,
     DownloadIcon,
     AppContainer,
     AppLogo,
+    BurgerMenuIcon,
+  },
+  created() {
+    window.addEventListener("resize", this.onResize);
+    this.onResize();
+  },
+  destroyed() {
+    window.removeEventListener("resize", this.onResize);
   },
   methods: {
     triggerDownload() {
@@ -19,6 +34,14 @@ export default {
       link.download = "resume.pdf";
       link.click();
       URL.revokeObjectURL(link.href);
+    },
+
+    onResize() {
+      this.isBigScreen = window.innerWidth >= 640;
+    },
+
+    toggleIsMenuOpen() {
+      this.isMenuOpen = !this.isMenuOpen;
     },
   },
 };
@@ -30,7 +53,7 @@ export default {
       <router-link to="/" class="header__link">
         <app-logo />
       </router-link>
-      <nav class="nav">
+      <nav class="nav" v-if="isBigScreen">
         <div class="nav__item">
           <router-link to="/#skills" class="nav__link">Навыки</router-link>
         </div>
@@ -44,11 +67,33 @@ export default {
           <router-link to="/#projects" class="nav__link">Проекты</router-link>
         </div>
       </nav>
-      <primary-button @click="triggerDownload"
+      <primary-button @click="triggerDownload" v-if="isBigScreen"
         ><div class="header__button">
           Резюме
           <download-icon /></div
-      ></primary-button></header
+      ></primary-button>
+      <burger-menu-icon v-else @click="toggleIsMenuOpen" />
+      <transition name="menu-fade">
+        <div class="nav nav-mobile" v-if="isMenuOpen">
+          <div class="nav__item" @click="toggleIsMenuOpen">
+            <router-link to="/#skills" class="nav__link">Навыки</router-link>
+          </div>
+          <div class="nav__item" @click="toggleIsMenuOpen">
+            <router-link to="/#exp" class="nav__link">Опыт</router-link>
+          </div>
+          <div class="nav__item" @click="toggleIsMenuOpen">
+            <router-link to="/#about" class="nav__link">Обо мне</router-link>
+          </div>
+          <div class="nav__item" @click="toggleIsMenuOpen">
+            <router-link to="/#projects" class="nav__link">Проекты</router-link>
+          </div>
+          <primary-button @click="triggerDownload"
+            ><div class="header__button">
+              Резюме
+              <download-icon /></div
+          ></primary-button>
+        </div>
+      </transition></header
   ></app-container>
 </template>
 
@@ -62,6 +107,7 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 
   &__link {
     display: inline-block;
@@ -86,6 +132,29 @@ export default {
   text-transform: capitalize;
   color: $primary-black;
 
+  @media (max-width: 640px) {
+    & {
+      font-size: 32px;
+    }
+  }
+
+  &-mobile {
+    flex-flow: column nowrap;
+    position: absolute;
+    top: 63px;
+    left: -16px;
+    background: $zinc-100;
+    z-index: 40;
+    width: calc(100% + 32px);
+    height: 100dvh;
+    padding: 16px;
+    box-sizing: border-box;
+
+    @media (min-width: 640px) {
+      display: none;
+    }
+  }
+
   &__link {
     text-decoration: none;
     color: $primary-black;
@@ -95,6 +164,27 @@ export default {
       text-decoration: underline;
       color: $primary-neutral;
     }
+
+    &:active {
+      text-decoration: underline;
+      color: $primary-neutral;
+    }
+  }
+}
+
+.menu-fade-enter-active,
+.menu-fade-leave-active {
+  transition: opacity 0.3s;
+}
+
+.menu-fade-enter,
+.menu-fade-leave-to {
+  opacity: 0;
+}
+
+@media (max-width: 640px) {
+  .header {
+    padding: 16px 0px;
   }
 }
 </style>

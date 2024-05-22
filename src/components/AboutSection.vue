@@ -84,4 +84,21 @@ export default {
     color: $zinc-500;
   }
 }
+
+@media (max-width: 640px) {
+  .about {
+    padding: 40px 0px;
+
+    &__img {
+      width: 100%;
+      height: auto;
+    }
+
+    &__wrapper {
+      padding: 0px;
+      flex-flow: column nowrap;
+      gap: 20px;
+    }
+  }
+}
 </style>

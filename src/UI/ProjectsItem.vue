@@ -136,4 +136,23 @@ export default {
     display: inline-block;
   }
 }
+
+@media (max-width: 640px) {
+  .project {
+    flex-flow: column nowrap;
+    gap: 16px;
+
+    &__cover {
+      width: 100%;
+      height: auto;
+      min-height: 300px;
+      max-height: 397px;
+    }
+
+    &__title {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+}
 </style>

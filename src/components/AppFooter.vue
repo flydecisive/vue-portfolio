@@ -51,4 +51,14 @@ export default {
     font-weight: 600;
   }
 }
+
+@media (max-width: 640px) {
+  .footer {
+    padding: 12px 0px;
+
+    &__wrapper {
+      padding: 0px;
+    }
+  }
+}
 </style>

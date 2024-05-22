@@ -11,6 +11,7 @@ export default {
   data() {
     return {
       projects: TOP_PROJECTS,
+      isBigScreen: true,
     };
   },
   components: {
