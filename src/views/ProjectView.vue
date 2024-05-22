@@ -156,6 +156,7 @@ export default {
     font-weight: 600;
     font-size: 20px;
     line-height: 24px;
+    align-self: flex-start;
   }
 
   &__function {

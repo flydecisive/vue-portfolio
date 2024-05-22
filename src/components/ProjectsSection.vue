@@ -43,9 +43,9 @@ export default {
           Мои <span class="section__title-bold">Проекты</span>
         </h2>
         <projects-item
-          v-for="project in projects"
+          v-for="(project, index) in projects"
           :item="project"
-          :order="project.id % 2 === 0 ? 0 : 1"
+          :order="index % 2 === 0 ? 0 : 1"
           :colorName="colorName"
         />
         <transparent-button @click="goToProjects" v-if="isMoreButtonVisible"

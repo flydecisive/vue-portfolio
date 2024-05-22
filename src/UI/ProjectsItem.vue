@@ -18,6 +18,7 @@ export default {
         background: `url('${this.item.cover_src}')`,
         "background-size": "cover",
         "background-repeat": "no-repeat",
+        "background-position": "center",
       };
     },
     titleStyle() {
