@@ -7,6 +7,7 @@ export default {
     return {
       currentIndex: 0,
       length: this.images.length,
+      isTouch: false,
       startX: null,
       endX: null,
     };
@@ -32,21 +33,31 @@ export default {
       }
     },
     start(e) {
+      this.isTouch = true;
       this.startX = e.touches[0].clientX;
     },
     move(e) {
-      this.endX = e.touches[0].clientX;
+      if (this.isTouch) {
+        this.endX = e.touches[0].clientX;
+      }
     },
     end() {
-      if (
-        this.startX > this.endX &&
-        this.currentIndex < this.images.length - 1
-      ) {
-        this.currentIndex += 1;
-      }
+      let delta = Math.abs(this.startX - this.endX);
+      if (this.isTouch && this.endX !== null) {
+        if (
+          this.startX > this.endX &&
+          delta >= 120 &&
+          this.currentIndex < this.images.length - 1
+        ) {
+          this.currentIndex += 1;
+        }
 
-      if (this.startX < this.endX && this.currentIndex > 0) {
-        this.currentIndex -= 1;
+        if (this.startX < this.endX && delta >= 120 && this.currentIndex > 0) {
+          this.currentIndex -= 1;
+        }
+
+        this.isTouch = false;
+        this.endX = null;
       }
     },
   },
