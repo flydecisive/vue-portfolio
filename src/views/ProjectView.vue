@@ -191,4 +191,22 @@ export default {
     }
   }
 }
+
+@media (max-width: 640px) {
+  .project-view {
+    &__wrapper {
+      padding: 40px 0px;
+    }
+
+    &__content {
+      flex-flow: column nowrap;
+      gap: 20px;
+    }
+
+    &__links {
+      width: 100%;
+      gap: 20px;
+    }
+  }
+}
 </style>

@@ -7,6 +7,8 @@ export default {
     return {
       currentIndex: 0,
       length: this.images.length,
+      startX: null,
+      endX: null,
     };
   },
   props: {
@@ -20,16 +22,35 @@ export default {
   },
   methods: {
     goToNextSlide() {
-      if (this.$data.currentIndex < this.images.length - 1) {
-        this.$data.currentIndex += 1;
+      if (this.currentIndex < this.images.length - 1) {
+        this.currentIndex += 1;
       }
     },
     goToPrevSlide() {
-      if (this.$data.currentIndex > 0) {
-        this.$data.currentIndex -= 1;
+      if (this.currentIndex > 0) {
+        this.currentIndex -= 1;
+      }
+    },
+    start(e) {
+      this.startX = e.touches[0].clientX;
+    },
+    move(e) {
+      this.endX = e.touches[0].clientX;
+    },
+    end() {
+      if (
+        this.startX > this.endX &&
+        this.currentIndex < this.images.length - 1
+      ) {
+        this.currentIndex += 1;
+      }
+
+      if (this.startX < this.endX && this.currentIndex > 0) {
+        this.currentIndex -= 1;
       }
     },
   },
+
   computed: {
     slideStyle() {
       return {
@@ -41,7 +62,7 @@ export default {
 </script>
 
 <template>
-  <div class="slider">
+  <div class="slider" @touchstart="start" @touchmove="move" @touchend="end">
     <transition name="fade" mode="out-in">
       <div class="slider__slide" :style="slideStyle" :key="currentIndex">
         <div class="blur">
@@ -51,6 +72,7 @@ export default {
     </transition>
     <div class="slider__controls">
       <slider-control-icon
+        class="slider__control"
         :transform="true"
         @click="goToPrevSlide"
         :isDisabled="this.$data.currentIndex === 0"
@@ -67,6 +89,7 @@ export default {
         ></div>
       </div>
       <slider-control-icon
+        class="slider__control"
         @click="goToNextSlide"
         :isDisabled="this.$data.currentIndex === images.length - 1"
       />
@@ -142,5 +165,21 @@ export default {
 .fade-enter,
 .fade-leave-to {
   opacity: 0;
+}
+
+@media (max-width: 640px) {
+  .slider {
+    &__slide {
+      max-height: 250px;
+    }
+
+    &__controls {
+      justify-content: center;
+    }
+
+    &__control {
+      display: none;
+    }
+  }
 }
 </style>

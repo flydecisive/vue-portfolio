@@ -2,6 +2,36 @@ const IMG_PATH = "/src/assets/img/";
 
 const TOP_PROJECTS = [
   {
+    id: 13,
+    name: "Онкологика",
+    description:
+      "Сервис помощи взрослым онкопациентам (проверка гипотезы компании)",
+    main_functions: [
+      "Аутентификация",
+      "Главная страница с боковым меню",
+      "Страница и система уведомлений",
+      "Блок с календарем: календарь ближайших мероприятий с фильтрами, страницы с онлайн и офлайн-мероприятиями (интеграция с сервисом DaData)",
+      "Страница списка всех ведущих мероприятий и страница отдельного ведущего",
+      "Блок Профиля: меню профиля, личная информация пользователя, документы пользователя, медицинская информация пользователя, верификация пользователя по номеру телефона (интеграция с сервисом CallGate)",
+    ],
+    stacks: ["NextJS", "React", "TypeScript", "Material UI", "Redux"],
+    source_code_link: "",
+    deploy_link: "",
+    cover_src: "/covers/oncologica.png",
+    images: [
+      "/oncologica/1.png",
+      "/oncologica/2.png",
+      "/oncologica/3.png",
+      "/oncologica/4.png",
+      "/oncologica/5.png",
+      "/oncologica/6.png",
+      "/oncologica/7.png",
+      "/oncologica/8.png",
+      "/oncologica/9.png",
+      "/oncologica/10.png",
+    ],
+  },
+  {
     id: 0,
     name: "Музыкальный плеер",
     description:
@@ -27,33 +57,6 @@ const TOP_PROJECTS = [
       `/react-player/3.png`,
       `/react-player/4.png`,
       `/react-player/5.png`,
-    ],
-  },
-  {
-    id: 1,
-    name: "Аналог авито",
-    description:
-      "skypro-avito - это платформа для продажи и покупки товаров и услуг, частично аналогичная по функционалу с Avito. Проект разработан с использованием современных инструментов и технологий, таких как React, Redux Toolkit, CSS Modules, Docker и TypeScript. Основные функции: – Регистрация и авторизация пользователей – Создание объявлений о продаже товаров и услуг с возможностью загрузки изображений",
-    main_functions: [
-      "Поиск товаров по названию",
-      "Редактирование объявлений о продаже",
-      "Возможность оставлять комментарии к товарам",
-      "Возможность редактирования профиля пользователя",
-      "Снятие объявлений с публикации",
-      "Редактирование аватара пользователя",
-      "Смена пароля пользователя",
-      "Возможность просмотра профиля продавца",
-      "Есть мобильная версия",
-    ],
-    stacks: ["React", "Redux", "TypeScript", "CSS-modules", "Docker"],
-    source_code_link: "https://github.com/flydecisive/skypro-avito",
-    deploy_link: "",
-    cover_src: `/covers/react-avito.png`,
-    images: [
-      `/skypro-avito/1.png`,
-      `/skypro-avito/2.png`,
-      `/skypro-avito/3.png`,
-      `/skypro-avito/4.png`,
     ],
   },
   {
