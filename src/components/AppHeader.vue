@@ -34,21 +34,29 @@ export default {
       link.download = "resume.pdf";
       link.click();
       URL.revokeObjectURL(link.href);
+      this.isMenuOpen = false;
+      this.unlockScroll();
     },
 
     onResize() {
       this.isBigScreen = window.innerWidth >= 640;
+    },
+    lockScroll() {
+      document.body.style.position = "fixed";
+      document.body.style.overflow = "hidden";
+    },
+    unlockScroll() {
+      document.body.style.position = "";
+      document.body.style.overflow = "";
     },
 
     handleBurgerMenu(e) {
       this.isMenuOpen = !this.isMenuOpen;
 
       if (this.isMenuOpen) {
-        document.body.style.position = "fixed";
-        document.body.style.overflow = "hidden";
+        this.lockScroll();
       } else {
-        document.body.style.position = "";
-        document.body.style.overflow = "";
+        this.unlockScroll();
       }
 
       const elementTextContent = e.target.textContent;
@@ -71,6 +79,10 @@ export default {
         }
       }
     },
+    handleLogo() {
+      this.isMenuOpen = false;
+      this.unlockScroll();
+    },
   },
 };
 </script>
@@ -79,7 +91,7 @@ export default {
   <app-container
     ><header class="header">
       <router-link to="/" class="header__link">
-        <app-logo @click="handleBurgerMenu" />
+        <app-logo @click="handleLogo" />
       </router-link>
       <nav class="nav" v-if="isBigScreen">
         <div class="nav__item">

@@ -27,5 +27,3 @@ export default {
     <page-up />
   </div>
 </template>
-
-<style scoped lang="scss"></style>
