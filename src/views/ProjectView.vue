@@ -3,6 +3,7 @@ import AppContainer from "@/components/AppContainer.vue";
 import DeployLinkIcon from "@/components/icons/DeployLinkIcon.vue";
 import SourceCodeLinkIcon from "@/components/icons/SourceCodeLinkIcon.vue";
 import AppSlider from "@/components/AppSlider.vue";
+import PageUp from "@/components/PageUp.vue";
 
 import PROJECTS from "@/consts/PROJECTS";
 
@@ -19,6 +20,7 @@ export default {
     DeployLinkIcon,
     SourceCodeLinkIcon,
     AppSlider,
+    PageUp,
   },
   methods: {
     defineProject() {
@@ -89,6 +91,7 @@ export default {
         </div>
       </div>
     </app-container>
+    <page-up />
   </section>
 </template>
 

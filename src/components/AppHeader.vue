@@ -143,7 +143,7 @@ export default {
     position: absolute;
     top: 63px;
     left: -16px;
-    background: $zinc-100;
+    background: $primary-white;
     z-index: 40;
     width: calc(100% + 32px);
     height: 100dvh;

@@ -1,6 +1,7 @@
 <script>
 import ProjectsSection from "@/components/ProjectsSection.vue";
 import PROJECTS from "@/consts/PROJECTS";
+import PageUp from "@/components/PageUp.vue";
 
 export default {
   name: "ProjectsView",
@@ -11,17 +12,19 @@ export default {
   },
   components: {
     ProjectsSection,
+    PageUp,
   },
 };
 </script>
 
 <template>
-  <div class="projects-view">
+  <div class="projects-view" @scroll="testScroll">
     <projects-section
       :colorName="'white'"
       :projects="projects"
       :isMoreButtonVisible="false"
     />
+    <page-up />
   </div>
 </template>
 

@@ -5,6 +5,7 @@ import ExperienceSection from "@/components/ExperienceSection.vue";
 import AboutSection from "@/components/AboutSection.vue";
 import ProjectsSection from "@/components/ProjectsSection.vue";
 import TOP_PROJECTS from "@/consts/TOP_PROJECTS";
+import PageUp from "@/components/PageUp.vue";
 
 export default {
   name: "MainView",
@@ -20,6 +21,7 @@ export default {
     AboutSection,
     ProjectsSection,
     SkillsSection,
+    PageUp,
   },
 };
 </script>
@@ -31,6 +33,7 @@ export default {
     <experience-section />
     <about-section />
     <projects-section :projects="projects" :isMoreButtonVisible="true" />
+    <page-up />
   </div>
 </template>
 
