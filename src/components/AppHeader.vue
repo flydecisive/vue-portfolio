@@ -40,8 +40,36 @@ export default {
       this.isBigScreen = window.innerWidth >= 640;
     },
 
-    toggleIsMenuOpen() {
+    handleBurgerMenu(e) {
       this.isMenuOpen = !this.isMenuOpen;
+
+      if (this.isMenuOpen) {
+        document.body.style.position = "fixed";
+        document.body.style.overflow = "hidden";
+      } else {
+        document.body.style.position = "";
+        document.body.style.overflow = "";
+      }
+
+      const elementTextContent = e.target.textContent;
+      switch (elementTextContent) {
+        case "Навыки": {
+          this.$router.push("/#skills");
+          break;
+        }
+        case "Опыт": {
+          this.$router.push("/#exp");
+          break;
+        }
+        case "Обо мне": {
+          this.$router.push("/#about");
+          break;
+        }
+        case "Проекты": {
+          this.$router.push("/#projects");
+          break;
+        }
+      }
     },
   },
 };
@@ -51,7 +79,7 @@ export default {
   <app-container
     ><header class="header">
       <router-link to="/" class="header__link">
-        <app-logo />
+        <app-logo @click="handleBurgerMenu" />
       </router-link>
       <nav class="nav" v-if="isBigScreen">
         <div class="nav__item">
@@ -72,20 +100,20 @@ export default {
           Резюме
           <download-icon /></div
       ></primary-button>
-      <burger-menu-icon v-else @click="toggleIsMenuOpen" />
+      <burger-menu-icon v-else @click="handleBurgerMenu" />
       <transition name="menu-fade">
         <div class="nav nav-mobile" v-if="isMenuOpen">
-          <div class="nav__item" @click="toggleIsMenuOpen">
-            <router-link to="/#skills" class="nav__link">Навыки</router-link>
+          <div class="nav__item" @click="handleBurgerMenu">
+            <p class="nav__link">Навыки</p>
           </div>
-          <div class="nav__item" @click="toggleIsMenuOpen">
-            <router-link to="/#exp" class="nav__link">Опыт</router-link>
+          <div class="nav__item" @click="handleBurgerMenu">
+            <p class="nav__link">Опыт</p>
           </div>
-          <div class="nav__item" @click="toggleIsMenuOpen">
-            <router-link to="/#about" class="nav__link">Обо мне</router-link>
+          <div class="nav__item" @click="handleBurgerMenu">
+            <p class="nav__link">Обо мне</p>
           </div>
-          <div class="nav__item" @click="toggleIsMenuOpen">
-            <router-link to="/#projects" class="nav__link">Проекты</router-link>
+          <div class="nav__item" @click="handleBurgerMenu">
+            <p class="nav__link">Проекты</p>
           </div>
           <primary-button @click="triggerDownload"
             ><div class="header__button">
@@ -140,7 +168,7 @@ export default {
 
   &-mobile {
     flex-flow: column nowrap;
-    position: absolute;
+    position: fixed;
     top: 63px;
     left: -16px;
     background: $primary-white;
