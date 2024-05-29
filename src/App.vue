@@ -13,5 +13,3 @@ export default {
   <router-view />
   <app-footer />
 </template>
-
-<style scoped></style>
