@@ -36,7 +36,7 @@ const EXPERIENCE = [
     id: 2,
     position: "Frontend-разработчик",
     name: "Oscar Studio",
-    exp: "Март 2024 — Апрель 2024",
+    exp: "Март 2024 — Август 2024",
     description:
       "Проектная работа. Верстка сайта по макету в Figma с использованием CSS-фреймворка Tailwind, написание скриптов на JavaScript.",
     stack: ["Tailwind", "JavaScript"],
